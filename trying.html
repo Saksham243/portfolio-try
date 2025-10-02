@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav {
+    display: flex;
+    /* justify-content: cen; */
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    justify-content: center;
+    background-color: #fff8dc; 
+    color: #333;
+    padding: 10px 15px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #333;
+    color: white;
+}
+
+main {
+    padding: 30px 20px;
+}
+
+.about {
+    background-color: #e0ddcf;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.about h2 {
+    margin-bottom: 10px;
+}
+
+.about img {
+    width: 150px;
+    height: 150px;
+    background-color: #ccc;
+    display: block;
+    margin-bottom: 15px;
+    border-radius: 50%;
+}
+
+.projects {
+    margin-bottom: 30px;
+}
+
+.projects h2 {
+    margin-bottom: 15px;
+}
+
+.projects div {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.projects img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    background-color: #ddd;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.contact {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.contact h2 {
+    margin-bottom: 15px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact input {
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+.contact button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #555;
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section class="about">
+            <div id="abt">
+                <h2>About me</h2>
+                <img src="">
+                <p>Hello everyone. My name is Saksham Garg. I am a student at Scaler School of Technology.
+                    I am a tech enthusiast and curious to learn about new things each day. Currently I am
+                    working in the role of a Frontend Developer.
+                </p>
+            </div>
+        </section>
+        <section class="projects">
+            <h2>Projects</h2>
+            <div id="Proj-1">
+                <h3>Project 1</h3>
+                <img src="">
+                <p>This is my first Project. It is a basic webpage designed to act as my portfolio</p>
+            </div>
+            <div id="Proj-2">
+                <h3>Project 2</h3>
+                <p>I have also worked on the project ________. 
+                This project helped the govt of India solve a major issue with the help of AI.</p>
+            </div>
+        </section>
+        <section class="contact">
+            <h2>Contact Me</h2>
+            <form>
+                <label>Name</label>
+                <input type="text" placeholder="Name">  
+                <label>Mobile Number</label>
+                <input type="number" placeholder="Phone no">  
+                <label>Email id</label>
+                <input type="email" placeholder="Email">  
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
