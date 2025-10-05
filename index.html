@@ -2,146 +2,214 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>My Portfolio</title>
     <style>
-      * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-body {
-    background-color: #f5f5f5;
-    color: #333;
-    line-height: 1.6;
-}
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
 
-header {
-    background-color: #333;
-    color: white;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-}
+        header {
+            /* position: fixed; */
+            width:auto;
+            background-color: #1f1f1f;
+            color: #e0e0e0;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
 
-nav {
-    display: flex;
-    /* justify-content: cen; */
-    gap: 15px;
-}
+        nav {
+            /* position: fixed; */
+            display: flex;
+            gap: 15px;
+            justify-content: flex-end;
+        }
 
-nav a {
-    text-decoration: none;
-    justify-content: center;
-    background-color: #fff8dc; 
-    color: #333;
-    padding: 10px 15px;
-    border: 2px solid #333;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
-}
+        nav a {
+            text-decoration: none;
+            justify-content: flex-end;
+            background-color: #333;
+            color: #e0e0e0;
+            padding: 10px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+        }
 
-nav a:hover {
-    background-color: #333;
-    color: white;
-}
+        nav a:hover {
+            background-color: #e0e0e0;
+            color: #121212;
+        }
 
-main {
-    padding: 30px 20px;
-}
+        main {
+            padding: 30px 20px;
+        }
 
-.about {
-    background-color: #e0ddcf;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 30px;
-}
+        .intro {
+            height:650px;
+            background-color: #1f1f1f;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            color: #e0e0e0;
+        }
 
-.about h2 {
-    margin-bottom: 10px;
-}
+        .intro img {
+            line-height: 250px;
+            text-align:center;
+            border:3px white solid;
+            width: 275px;
+            height: 275px;
+            background-color: #444;
+            display: block;
+            margin-bottom: 35px;
+            border-radius: 50%;
+        }
+        .icon{  
+            background-color: white;
+            height:65px;
+            width:65px;
+            border-radius:50%;
+            display:inline-block;
+            /* padding: 20px; */
+            margin-top:30px;
+            margin:25px;
+        }
+        .icon:hover{
+            padding:5px;
+            
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
 
-.about img {
-    width: 150px;
-    height: 150px;
-    background-color: #ccc;
-    display: block;
-    margin-bottom: 15px;
-    border-radius: 50%;
-}
 
-.projects {
-    margin-bottom: 30px;
-}
+        .projects h2 {
+            width:100%;
+            display: inline-block;
+            margin-bottom: 15px;
+            color: #e0e0e0;
+        }
 
-.projects h2 {
-    margin-bottom: 15px;
-}
+        .projects div {
+            background-color: #222;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            color: #ddd;
+        }
+        
+        .projects img {
+            display:block;
+            width: 100%;
+            max-width: 300px;
+            height: 200px;
+            background-color: #444;
+            display: block;
+            margin-bottom: 10px;
+        }
 
-.projects div {
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-}
+        .contact {
+            background-color: #1f1f1f;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            color: #e0e0e0;
+        }
 
-.projects img {
-    width: 100%;
-    max-width: 300px;
-    height: 200px;
-    background-color: #ddd;
-    display: block;
-    margin-bottom: 10px;
-}
+        .contact h2 {
+            margin-bottom: 15px;
+        }
 
-.contact {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-}
+        .contact form {
+            display: flex;
+            flex-direction: column;
+        }
 
-.contact h2 {
-    margin-bottom: 15px;
-}
+        .contact label {
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #ccc;
+        }
 
-.contact form {
-    display: flex;
-    flex-direction: column;
-}
+        .contact input {
+            padding: 10px;
+            border: 1px solid #555;
+            border-radius: 5px;
+            background-color: #333;
+            color: #e0e0e0;
+        }
 
-.contact label {
-    margin-top: 10px;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
+        .contact input::placeholder {
+            color: #bbb;
+        }
 
-.contact input {
-    padding: 10px;
-    border: 1px solid #aaa;
-    border-radius: 5px;
-}
+        .contact button {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-.contact button {
-    margin-top: 15px;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.contact button:hover {
-    background-color: #555;
-}
-
+        .contact button:hover {
+            background-color: #555;
+        }
+        
+        .button_about{
+            border:3px white solid;
+            text-align:center;
+            line-height: 75px;
+            text-decoration: none;
+            color: black;
+            font-size: x-large;
+            background-color: #82A7A6 ;
+            border-radius:35px;
+            display: inline-block;
+            height: 75px;
+            width: 300px;
+            margin:20px;
+        }
+        .button_about:hover{
+            color:white;
+            background-color: #00171F;
+        }
+        .about{
+            margin-bottom:20px;
+            padding: 30px;
+            font-size: x-large;
+            /* text-align: center; */
+            border-radius: 10px;
+            background-color:#1f1f1f ;
+            height:350px;
+        }
+        #info{
+            margin-bottom:10px;
+        }
+        #lang{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        
     </style>
 </head>
 
@@ -155,38 +223,59 @@ main {
         </nav>
     </header>
     <main>
-        <section class="about">
+        <section class="intro" id="about">
             <div id="abt">
-                <h2>About me</h2>
-                <img src="">
-                <p>Hello everyone. My name is Saksham Garg. I am a student at Scaler School of Technology.
-                    I am a tech enthusiast and curious to learn about new things each day. Currently I am
-                    working in the role of a Frontend Developer.
+                <!-- <h2>About me</h2> -->
+                <img src="./25BCS10026.jpg" alt="Profile picture" />
+                <h1>Hi everyone, I am Saksham Garg. A tech enthusiast, trying to learn more each day!!!</h1>
+                <a href="https://github.com/Saksham243" target="_blank" class="icon">
+                    <img src="./github_733609.png" style="width: 64px; height: 64px;">
+                    
+                </a>
+                <a href="https://www.linkedin.com/in/saksham-garg-bb731330a/" target="_blank" class="icon">
+                    <img src="./linkedin_187185.png" style="width: 64px; height: 64px;">
+                </a>
+                <br>
+                <a href="#projects" class="button_about">Read more</a>
+                <a href="#contact" class="button_about">Contact</a>
+
+            </div>
+        </section>
+            <div class="about">
+                <p id="info">I am a computer science majors student in Scaler School of Technology(Bangalore).
+                    I enjoy problem-solving and coding. I am always intrigued to learn new things
+                    and more about technology. I am always open to work and learn new things. I have worked on languages
+                    like Java, C++, Python, HTML, CSS, JS.
+                </p>
+                <hr>
+                <article id="lang"><strong>Languages: </strong>Java,C++,Python,HTML,CSS,JS</article>
+                <article id="tools"><strong>Tools:</strong>Git,AI</article>
+                <p>Looking to learn more technologies and work harder each day.</p>
+            </div>
+        <section class="projects" id="projects">
+            <h2>Projects</h2>
+            <div id="Proj_1">
+                <h3>Project 1</h3>
+                <img src="./dwnload.jfif" alt="Project 1 screenshot">
+                <p>This is my first Project. It is a basic calculator.</p>
+            </div>
+            <div id="Proj_2">
+                <h3>Project 2</h3>
+                <!-- <img src=""> -->
+                <p>
+                    I have also worked on this website which acts as my portfolio.
                 </p>
             </div>
         </section>
-        <section class="projects">
-            <h2>Projects</h2>
-            <div id="Proj-1">
-                <h3>Project 1</h3>
-                <img src="">
-                <p>This is my first Project. It is a basic webpage designed to act as my portfolio</p>
-            </div>
-            <div id="Proj-2">
-                <h3>Project 2</h3>
-                <p>I have also worked on the project ________. 
-                This project helped the govt of India solve a major issue with the help of AI.</p>
-            </div>
-        </section>
-        <section class="contact">
+        <section class="contact" id="contact">
             <h2>Contact Me</h2>
             <form>
-                <label>Name</label>
-                <input type="text" placeholder="Name">  
-                <label>Mobile Number</label>
-                <input type="number" placeholder="Phone no">  
-                <label>Email id</label>
-                <input type="email" placeholder="Email">  
+                <label for="name">Name</label>
+                <input id="name" type="text" placeholder="Name" />
+                <label for="phone">Mobile Number</label>
+                <input id="phone" type="number" placeholder="Phone no" />
+                <label for="email">Email id</label>
+                <input id="email" type="email" placeholder="Email" />
                 <button type="submit">Submit</button>
             </form>
         </section>
