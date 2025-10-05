@@ -210,6 +210,77 @@
             margin-bottom: 10px;
         }
         
+        @media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .intro {
+        padding: 15px;
+        text-align: center;
+        height: auto;
+    }
+
+    .intro img {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto 20px auto;
+    }
+
+    .button_about {
+        width: 80%;
+        font-size: large;
+        line-height: 60px;
+        height: 60px;
+    }
+
+    .about {
+        padding: 20px;
+        font-size: large;
+        height: auto;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .projects img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .contact {
+        padding: 15px;
+    }
+
+    .contact input,
+    .contact button {
+        font-size: 1em;
+    }
+
+    .icon {
+        margin: 10px;
+        height: 50px;
+        width: 50px;
+    }
+
+    .icon img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+        
     </style>
 </head>
 
